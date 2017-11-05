@@ -1,0 +1,34 @@
+﻿<Window x:Class="GradientControls.SetOpacityWindow" x:ClassModifier="internal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Set Opacity" Height="130" Width="220" WindowStartupLocation="CenterScreen"   
+        ResizeMode="NoResize"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+            <TextBlock Margin="5,0,5,0" VerticalAlignment="Center">Opacity:</TextBlock>
+            <TextBox Name="OpacityTextBox" Height="20" Margin="5,5,5,5" Width="40" HorizontalAlignment="Left" LostFocus="OpacityTextBox_LostFocus"></TextBox>
+            </StackPanel>
+            <Slider Margin="5,5,5,5" 
+                    Background="White" 
+                    LargeChange="1" 
+                    SmallChange="1" 
+                    IsSnapToTickEnabled="True" 
+                    TickFrequency="1" 
+                    Maximum="100" 
+                    Minimum="0"
+                    Name="OpacitySlider" 
+                    ValueChanged="OpacitySlider_ValueChanged"
+                    />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Name="OKButton" Width="80" Margin="0,5,5,5" Click="OKButton_Click" >OK</Button>
+            <Button Name="CancelButton" Width="80" Margin="0,5,5,5" Click="CancelButton_Click">Cancel</Button>
+        </StackPanel>
+    </Grid>
+</Window>

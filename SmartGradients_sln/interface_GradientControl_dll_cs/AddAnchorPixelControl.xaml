@@ -1,0 +1,67 @@
+﻿<UserControl xmlns:GradientControls="clr-namespace:GradientControls"  x:Class="GradientControls.AddAnchorPixelControl" x:ClassModifier="internal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="250">
+    
+    <UserControl.Resources>
+        <ControlTemplate TargetType="Button" x:Key="bla2">
+            <Border BorderBrush="#FF818181" BorderThickness="1" ClipToBounds="True"  x:Name="Border" Margin="-1,0,0,0"
+                                CornerRadius="{TemplateBinding Property=Margin}">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFD7D7D7" Offset="1"/>
+                        <GradientStop Color="#FFECECEC"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Grid>
+                    <Rectangle Width="1" VerticalAlignment="Stretch" HorizontalAlignment="Left" Fill="White" Opacity="0.6" x:Name="Rezb1"></Rectangle>
+                    <Rectangle Height="1" VerticalAlignment="Top" HorizontalAlignment="Stretch" Fill="White" Opacity="0.6" x:Name="Rezb2"></Rectangle>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0" Foreground="White">
+                        <ContentPresenter />
+                    </TextBlock>
+                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,3,0,0" Foreground="Black">
+                        <ContentPresenter />
+                    </TextBlock>
+                    
+                </Grid>
+
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="true">
+                    <Setter TargetName="Border" Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFEBEBEB" Offset="1"/>
+                                <GradientStop Color="#FFFAFAFA"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter TargetName="Border" Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFA0A0A0" />
+                                <GradientStop Color="#FFCECECE" Offset="0.556"/>
+                                <GradientStop Color="#FFBDBDBD" Offset="0.209"/>
+                                <GradientStop Color="#FFC4C4C4" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </UserControl.Resources>
+    <Canvas>
+         <GradientControls:AnchorPixelControl x:Name="AnchorPixelToBeAdded"  HorizontalAlignment="Left" Margin="20,7,0,0" MouseDoubleClick="AnchorPixelControl_MouseDoubleClick" MouseMove="AnchorPixelToBeAdded_MouseMove"/>
+        <Button Name="SetColorButton" Template="{StaticResource bla2}" Height="20" Width="82" Canvas.Bottom="15" Canvas.Left="60"  Click="SetColorButton_Click">Set Color</Button>
+        <Button Name="SetOpacityButton" Template="{StaticResource bla2}" Height="20" Width="82" Canvas.Bottom="15" Canvas.Left="142" IsEnabled="False"
+                Click="SetOpacityButton_Click">Set Opacity</Button>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,10,0,0" Width="200" Foreground="White" Opacity="0.6"  TextWrapping="WrapWithOverflow">Drag and drop anchor pixel on gradient to add anchor pixel</TextBlock>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="60,9,0,0" Width="200" TextWrapping="WrapWithOverflow">Drag and drop anchor pixel on gradient to add anchor pixel</TextBlock>
+
+    </Canvas>
+</UserControl>

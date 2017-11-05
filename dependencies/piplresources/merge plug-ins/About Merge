@@ -1,0 +1,28 @@
+                                                                                                                         11/17/96
+Merge Plug-Ins 1.0
+
+¥What is it?   
+Merge Plug-Ins is an application  to combine separate Adobe Photoshop Plug-Ins into a single file.  This way you need only distribute one file to your end users instead of many plug-ins.  NOTE :  combined plug-ins only work in Photoshop 3.0 (or higher) compliant products.  
+
+¥How do I use it?   
+To use Merge Plug-Ins, select your separate plug-ins or a folder of plug-ins from the Finder, and drop them on this application.  Merge Plug-Ins, will then combine your plug-ins into a single file.  As it does this, it will patch the 'PiPL' resources so that Adobe Photshop will be able to find the copied PowerPC code in the data fork of each plug-in.  
+
+Merge Plug-Ins is ©1996 by J. Scott Tury. This application is being distributed as freeware, please feel free to pass it around.  (And send me email if you find any problems!)
+
+Notes about this release:
+¥  Combined plug-ins only work in Photoshop 3.0 (or higher) compliant applcations.
+¥  More Warnings and Error messages will be added in the future.  
+¥  Added a Preference setting so you can control what messages you see.
+¥  This is now both a full blown application AND   a Drag & Drop application.  So you could either drag a bunch of Photoshop filters onto the program icon to Merge them, or Open them up within MergePlug-Ins.  
+¥  To support Photoshop 4.0, two new file types have been added to the list of supported plug-in types.
+¥  If any bugs are discovered, please send them to me!!!  I will fix them as soon as I can.
+
+
+Any problems, or bugs associated with this plug-in should be directed to J. Scott Tury at the following address:
+
+J. Scott Tury
+7533 McWhorter Pl, #202
+Annandale, Va 22003
+
+Internet:        stury@ids2.idsonline.com
+AOL:               STury

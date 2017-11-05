@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="SmartGradientsInstaller.Controls.WelcomeControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SmartGradientsInstaller.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Smart Gradients SetUp;component/Resources/WelcomeBackground.jpg" Stretch="None"/>
+        </Grid.Background>
+        <Label Style="{StaticResource WindowName}" Margin="20,280,0,0">Smart Gradients Beta</Label>
+        <TextBlock Style="{StaticResource AdditionalText}" Width="330" Margin="25,330,0,0">Welcome to installation wizzard for Smart Gradients Beta plugin for Adobe® Photoshop®. Not for commercial use.</TextBlock>
+    </Grid>
+</UserControl>

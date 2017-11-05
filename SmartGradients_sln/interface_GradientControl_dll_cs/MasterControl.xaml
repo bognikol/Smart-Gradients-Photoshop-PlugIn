@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="GradientControls.MasterControl" x:ClassModifier="internal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="370" d:DesignWidth="250">
+    <StackPanel Orientation="Vertical" Margin="10">
+        <StackPanel Orientation="Horizontal">
+            <RadioButton Name="ComplexRadioButton" IsChecked="True" Click="ComplexRadioButton_Click" Height="38" Width="115">
+                <Border BorderBrush="Black" BorderThickness="1" >
+                    <Image Width="20" Height="20" Source="Resources\complexaa.png"/>
+                </Border>
+            </RadioButton>
+            <RadioButton Name="LinearRadioButton" Click="LegacyRadioButton_Click" Height="38" Width="38">
+                <Border BorderBrush="Black" BorderThickness="1" >
+                    <Image Width="20" Height="20" Source="Resources\linearaa.png"/>
+                </Border>
+            </RadioButton>
+            <RadioButton Name="RadialRadioButton" Click="LegacyRadioButton_Click" Height="38" Width="38">
+                <Border BorderBrush="Black" BorderThickness="1" >
+                    <Image Width="20" Height="20" Source="Resources\radialaa.png"/>
+                </Border>
+            </RadioButton>
+            <RadioButton Name="AngledRadioButton" Click="LegacyRadioButton_Click" Height="38" Width="39">
+                <Border BorderBrush="Black" BorderThickness="1" >
+                    <Image Width="20" Height="20" Source="Resources\angledaa.png"/>
+                </Border>
+            </RadioButton>
+        </StackPanel>
+
+        <StackPanel Name="LegacyStck" Visibility="Collapsed" Margin="0,160,0,0" Width="200">
+            <StackPanel Orientation="Horizontal"><Label>Graduation</Label><TextBox Name="GraduationTextBox" IsReadOnly="True" Margin="8,0,0,0" Width="35">0</TextBox></StackPanel>
+            <Slider Name="GraduationSlider" Maximum="100" SmallChange="0" IsSnapToTickEnabled="True" Margin="0,7,0,0" ValueChanged="GraduationSlider_ValueChanged"></Slider>
+        </StackPanel>
+        <StackPanel Name="ComplexStck" Margin="0,160,0,0" Width="220">
+            <Canvas Height="60">
+                <Label Margin="6,15,0,0">Px</Label>
+                <TextBox Name="PxTextBox" IsReadOnly="True" HorizontalContentAlignment="Center" Canvas.Top="30" Margin="2,0,0,0" Width="22" ></TextBox>
+                <Label Canvas.Right="10" Margin="0,15,0,0">Py</Label>
+                <TextBox Name="PyTextBox" IsReadOnly="True" HorizontalContentAlignment="Center" Canvas.Top="30" Canvas.Right="2" Width="22"></TextBox>
+            </Canvas>
+            <Slider Name="PxPySlider" TickPlacement="Both" IsSnapToTickEnabled="True" SmallChange="1" Minimum="1"></Slider>
+            
+            <StackPanel Name="DiffusionIndexStck" Margin="0,5,0,5" Orientation="Horizontal">
+                <Label Margin="5,0,0,0">Diffusion index</Label>
+                <ComboBox Name="DiffusionIndexComboBox" DropDownClosed="DiffusionIndexComboBox_DropDownClosed" Height="24" Width="60" Margin="10,0,0,0" VerticalContentAlignment="Center" Padding="5,0,0,0" SelectedIndex="2">
+                    <ComboBox.Items>
+                        <ComboBoxItem>0.5</ComboBoxItem>
+                        <ComboBoxItem>0.75</ComboBoxItem>
+                        <ComboBoxItem>1.0</ComboBoxItem>
+                        <ComboBoxItem>1.5</ComboBoxItem>
+                        <ComboBoxItem>2.0</ComboBoxItem>
+                        <ComboBoxItem>2.5</ComboBoxItem>
+                        <ComboBoxItem>3.0</ComboBoxItem>
+                    </ComboBox.Items>
+                </ComboBox>
+            </StackPanel>
+            
+            <StackPanel Name="ParameterStck" Orientation="Horizontal" Margin="0,10,0,0">
+                <CheckBox Name="ParameterCheckBox" Margin="5,-1,0,0" VerticalAlignment="Center" Click="ParameterCheckBox_Click"></CheckBox>
+                <Label Margin="8,2,0,0">Use Parameter  -  Value</Label>
+                <TextBox Name="ParameterTextBox" IsEnabled="False" Margin="6,0,0,0" Width="40" Height="22" Text="165" LostFocus="ParameterTextBox_LostFocus"></TextBox>
+            </StackPanel>
+            <Slider Name="ParameterSlider" IsEnabled="False" Maximum="400" SmallChange="1" Value="165" Margin="0,10,0,0" IsSnapToTickEnabled="True"></Slider>
+            
+        </StackPanel>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="GradientControls.ZoomControl" x:ClassModifier="internal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="300">
+    <StackPanel Orientation="Horizontal">
+        <ComboBox Name="ZoomComboBox" SelectedIndex="6" Margin="3" Width="117" SnapsToDevicePixels="True" SelectionChanged="ZoomComboBox_Selected">
+            <ComboBox.Items>
+                <ComboBoxItem Padding="5,2,0,0">6%</ComboBoxItem>
+                <ComboBoxItem Padding="5,2,0,0">12%</ComboBoxItem>
+                <ComboBoxItem Padding="5,2,0,0">25%</ComboBoxItem>
+                <ComboBoxItem Padding="5,2,0,0">50%</ComboBoxItem>
+                <ComboBoxItem Padding="5,2,0,0">75%</ComboBoxItem>
+                <ComboBoxItem IsEnabled="False">
+                    <Line Margin="0,3,0,3" X1="0" X2="100" Y1="0" Y2="0" Stroke="#FF939393" SnapsToDevicePixels="True" StrokeThickness="2"/>
+                </ComboBoxItem >
+                <ComboBoxItem Padding="5,2,0,0">100%</ComboBoxItem>
+                <ComboBoxItem IsEnabled="False">
+                    <Line Margin="0,3,0,3" X1="0" X2="100" Y1="0" Y2="0" Stroke="#FF939393" SnapsToDevicePixels="True" StrokeThickness="2"/>
+                </ComboBoxItem>
+                <ComboBoxItem Padding="5,2,0,0">200%</ComboBoxItem>
+                <ComboBoxItem Padding="5,2,0,0">300%</ComboBoxItem>
+                <ComboBoxItem Padding="5,2,0,0">400%</ComboBoxItem>
+                <ComboBoxItem IsEnabled="False">
+                    <Line Margin="0,3,0,3" X1="0" X2="100" Y1="0" Y2="0" Stroke="#FF939393" SnapsToDevicePixels="True" StrokeThickness="2"/>
+                </ComboBoxItem>
+                <ComboBoxItem Padding="5,2,2,3">Fit the viewport</ComboBoxItem>
+            </ComboBox.Items>
+        </ComboBox>
+        <Button Name="ZoomInButton" Margin="2,4,4,4" Width="22" FontSize="13" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="ZoomInButton_Click">+</Button>
+        <Button Name="ZoomOutButton" Margin="2,4,4,4" Width="22" FontSize="13" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="ZoomOutButton_Click">−</Button>
+    </StackPanel>
+</UserControl>

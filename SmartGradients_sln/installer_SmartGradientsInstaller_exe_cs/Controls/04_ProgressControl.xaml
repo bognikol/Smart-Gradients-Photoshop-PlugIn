@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="SmartGradientsInstaller.Controls.ProgressControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SmartGradientsInstaller.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Label Style="{StaticResource WindowName}">Progress</Label>
+        <TextBlock Style="{StaticResource AdditionalText}" Width="600" Margin="20,100,0,0">Smart Gradients Beta is installing. Please wait...</TextBlock>
+        <TextBlock Name="CurInstlTxtBx" Style="{StaticResource AdditionalText}" Width="600" Margin="20,230,0,0">Currently installing: Microsoft Visual C++ 2015 Redistributable</TextBlock>
+        <ProgressBar Name="InstlProgrs" Height="10" Margin="20,85,20,0" ></ProgressBar>
+    </Grid>
+</UserControl>

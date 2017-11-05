@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="GradientControls.AngleVertexControl" x:ClassModifier="internal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="30">
+    <UserControl.Effect>
+        <DropShadowEffect Opacity="0.5" ShadowDepth="2"/>
+    </UserControl.Effect>
+    <Grid>
+        <Ellipse Name="Pixel" Width="30" Height="30" Fill="Black" Stroke="White" StrokeThickness="0" />
+        <Ellipse Name="InnerPixel" Width="20" Height="20" Fill="#FFE2E2E2" />
+    </Grid>
+</UserControl>
